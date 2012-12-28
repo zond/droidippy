@@ -3,6 +3,8 @@ droidippy
 
 The Droidippy Android client.
 
+Used to live at http://mtn-host.prjek.net/projects/droidippy/ (where you can also find the jDip version used by the server to adjudicate), so historical commits can be found there.
+
 To build it you must create a file called `local.properties` containing the path to your Android SDK directory. In my case:
 
     sdk.dir=/Users/zond/android-sdk-macosx
