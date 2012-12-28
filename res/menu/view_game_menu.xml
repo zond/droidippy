@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:id="@+id/view_game_all_games"
+	android:title="@string/all_games" />
+  <item android:id="@+id/help"
+	android:title="@string/faq" />
+  <item android:id="@+id/view_game_phase_list"
+	android:showAsAction="ifRoom"
+	android:title="@string/history" />
+  <item android:id="@+id/view_game_previous_phase"
+	android:showAsAction="ifRoom"
+	android:title="@string/previous_phase" />
+  <item android:id="@+id/view_game_next_phase"
+	android:showAsAction="ifRoom"
+	android:title="@string/next_phase" />
+  <item android:id="@+id/view_game_current_phase"
+	android:showAsAction="ifRoom"
+	android:title="@string/current_phase" />
+</menu>

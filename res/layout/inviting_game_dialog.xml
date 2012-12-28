@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+  <LinearLayout android:id="@+id/inviting_game_dialog_layout"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+    <TextView android:id="@+id/inviting_game_dialog_code"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:paddingLeft="10dp"
+	      android:paddingRight="10dp"
+	      android:text="@string/invitation_code" />
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_private_chat_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:layout_weight="1"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/private_chat" />
+      <Spinner android:id="@+id/inviting_game_dialog_private_chat"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/private_chat" />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_conference_chat_text"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/conference_chat" />
+      <Spinner android:id="@+id/inviting_game_dialog_conference_chat"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/conference_chat" />
+    </LinearLayout>      
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_public_email_text"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/public_email" />
+      <CheckBox android:id="@+id/inviting_game_dialog_public_email"
+		android:layout_width="wrap_content"
+		android:layout_gravity="right|center_vertical"
+		android:layout_height="wrap_content" />
+    </LinearLayout>      
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_dias_text"
+		android:layout_width="wrap_content"
+		android:layout_gravity="left"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/draws_include_all_survivors" />
+      <CheckBox android:id="@+id/inviting_game_dialog_dias"
+		android:layout_width="wrap_content"
+		android:layout_gravity="right|center_vertical"
+		android:layout_height="wrap_content" />
+    </LinearLayout>      
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_allow_invalid_orders_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:layout_weight="1"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/allow_invalid_orders" />
+      <CheckBox android:id="@+id/inviting_game_dialog_allow_invalid_orders"
+		android:layout_width="wrap_content"
+		android:layout_gravity="right|center_vertical"
+		android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_end_year_text"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/end_year" />
+      <Spinner android:id="@+id/inviting_game_dialog_end_year"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/end_year" />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_points_system_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:layout_weight="1"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/points_system" />
+      <Spinner android:id="@+id/inviting_game_dialog_points_system"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/points_system" />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_positions_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="24sp"
+		android:layout_weight="1"
+		android:layout_gravity="left"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/positions" />
+      <Spinner android:id="@+id/inviting_game_dialog_positions"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/positions" />
+    </LinearLayout>
+    
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_deadline_text"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/deadline" />
+      <Spinner android:id="@+id/inviting_game_dialog_deadline"
+	       android:layout_width="wrap_content"
+	       android:layout_gravity="right|center_vertical"
+	       android:layout_height="wrap_content"
+	       android:prompt="@string/deadline" />
+    </LinearLayout>
+   
+    <LinearLayout android:orientation="horizontal"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content">
+      <TextView android:id="@+id/inviting_game_dialog_minimum_reliability_text"
+		android:layout_width="wrap_content"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:layout_gravity="left"
+		android:textSize="24sp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:text="@string/minimum_reliability" />
+      <EditText android:id="@+id/inviting_game_dialog_minimum_reliability"
+                android:layout_width="wrap_content"
+                android:numeric="integer"
+                android:digits="0123456789"
+                android:layout_gravity="right|center_vertical"
+                android:layout_height="wrap_content" />
+    </LinearLayout>
+   
+    <Button android:id="@+id/inviting_game_dialog_invite"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/invite" />
+
+    <TextView android:id="@+id/inviting_game_dialog_members_text" 
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:paddingRight="10dp"
+	      android:paddingLeft="10dp"
+	      android:textSize="24sp"
+	      android:text="@string/members" />
+
+    <LinearLayout android:id="@+id/inviting_game_dialog_members"
+		  android:orientation="vertical"
+		  android:layout_width="match_parent"
+		  android:layout_height="wrap_content"
+		  android:layout_below="@+id/inviting_game_dialog_members_text" />
+  </LinearLayout>
+</ScrollView>

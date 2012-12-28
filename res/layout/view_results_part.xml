@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:background="#ffffff"
+		android:id="@+id/view_results_layout"
+		android:layout_weight="1"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+  <TextView android:id="@+id/view_results_title"
+	    android:layout_width="match_parent"
+	    android:textSize="24sp"
+	    android:text="@string/view_results"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true" />
+  <ScrollView android:layout_width="match_parent"
+	      android:layout_height="match_parent"
+	      android:layout_below="@+id/view_results_title"
+	      android:layout_alignParentRight="true"
+	      android:layout_alignParentLeft="true"
+	      android:layout_above="@+id/view_game_left_arrow">
+    <EditText android:id="@+id/view_results_text"
+	      android:editable="false"
+	      android:textSize="14sp"
+	      android:background="#ffffff"
+	      android:textAppearance="@android:style/Widget.TextView"
+	      android:textColor="#000000"
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent"/>
+  </ScrollView>
+  <ImageButton android:id="@+id/view_game_left_arrow"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentBottom="true"
+	       android:layout_alignParentLeft="true"
+	       android:background="@null"
+	       android:src="@drawable/left" />
+  <ImageButton android:id="@+id/view_game_right_arrow"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentBottom="true"
+	       android:layout_alignParentRight="true"
+	       android:background="@null"
+	       android:src="@drawable/right" />
+</RelativeLayout>

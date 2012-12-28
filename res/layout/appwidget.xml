@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:focusable="true"
+		android:padding="@dimen/widget_margin">
+  <RelativeLayout android:id="@+id/appwidget_relative_layout" 
+		  android:layout_width="match_parent"
+		  android:layout_height="match_parent">
+    <ImageView android:id="@+id/appwidget_icon"
+	       android:src="@drawable/icon" 
+	       android:layout_height="wrap_content"
+	       android:layout_alignParentTop="true"
+	       android:layout_centerHorizontal="true"
+	       android:layout_width="wrap_content" />
+    <FrameLayout android:id="@+id/appwidget_message"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:visibility="gone"
+		 android:layout_below="@+id/appwidget_icon"
+		 android:layout_alignRight="@+id/appwidget_icon">
+      <ImageView android:src="@drawable/widget_message" 
+		 android:layout_height="wrap_content"
+		 android:layout_centerInParent="true"
+		 android:layout_width="wrap_content" />
+      <TextView android:id="@+id/appwidget_messages"
+		android:paddingLeft="4dp"
+		android:layout_height="wrap_content"
+		android:textSize="11dp"
+		android:textStyle="bold"
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true" />
+    </FrameLayout>
+    <FrameLayout android:id="@+id/appwidget_phase"
+		 android:layout_height="wrap_content"
+		 android:layout_width="wrap_content"
+		 android:visibility="gone"
+		 android:layout_below="@+id/appwidget_icon"
+		 android:layout_alignLeft="@+id/appwidget_icon">
+      <ImageView android:src="@drawable/widget_attention" 
+		 android:layout_height="wrap_content"
+		 android:layout_centerInParent="true"
+		 android:layout_width="wrap_content" />
+      <TextView android:id="@+id/appwidget_phases"
+		android:textSize="11dp"
+		android:textStyle="bold"
+		android:paddingLeft="4dp"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true" />
+    </FrameLayout>
+  </RelativeLayout>
+</RelativeLayout>

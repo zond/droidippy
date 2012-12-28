@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/select_draw_powers_dialog_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+  <TextView android:id="@+id/select_draw_powers_dialog_header"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_alignParentTop="true"
+	    android:text="@string/what_powers_in_draw"
+	    android:padding="10dp"
+	    android:textSize="18sp" />
+  <ListView android:id="@+id/select_draw_powers_dialog_powers"
+	    android:layout_below="@+id/select_draw_powers_dialog_header"
+	    android:layout_above="@+id/select_draw_powers_buttons"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
+  <LinearLayout android:id="@+id/select_draw_powers_buttons"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentLeft="true">
+    <Button android:id="@+id/select_draw_powers_dialog_ok"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:padding="10dp"
+	    android:text="@string/ok" />
+    <Button android:id="@+id/select_draw_powers_dialog_cancel"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:padding="10dp"
+	    android:text="@string/cancel" />
+  </LinearLayout>
+</RelativeLayout>

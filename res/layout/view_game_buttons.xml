@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+  <ImageButton android:id="@+id/view_game_right_arrow"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:background="@null"
+	       android:layout_gravity="right|bottom"
+	       android:src="@drawable/right" />
+  <ImageButton android:id="@+id/view_game_left_arrow"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:background="@null"
+	       android:layout_gravity="left|bottom"
+	       android:src="@drawable/left" />
+</merge>

@@ -1,0 +1,9 @@
+package cx.ath.troja.droidippy;
+
+public class LocalOptions {
+
+    public static final String BASE_DOMAIN = "@BASE_DOMAIN@";
+    public static final String BASE_PORT = "@BASE_PORT@";
+    public static final String MTN_REVISION = "@MTN_REVISION@";
+
+}

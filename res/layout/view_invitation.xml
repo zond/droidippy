@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:id="@+id/view_invitation_layout"
+	      android:orientation="vertical"
+	      android:layout_width="match_parent"
+	      android:layout_height="match_parent">
+  <TextView android:id="@+id/view_invitation_explanation"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="18sp" />
+  <Button android:id="@+id/view_invitation_accept"
+	  android:text="@string/accept"
+	  android:layout_width="match_parent"
+	  android:layout_height="wrap_content" />
+  <Button android:id="@+id/view_invitation_decline"
+	  android:text="@string/decline"
+	  android:layout_width="match_parent"
+	  android:layout_height="wrap_content" />
+</LinearLayout>

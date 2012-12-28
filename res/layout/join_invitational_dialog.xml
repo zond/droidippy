@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:id="@+id/join_invitational_layout"
+	      android:orientation="vertical"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content">
+  <TextView android:layout_width="match_parent"
+	    android:textSize="20sp"
+	    android:padding="10dp"
+	    android:layout_height="wrap_content" 
+	    android:text="@string/enter_the_invitation_code" />
+  <EditText android:id="@+id/join_invitational_dialog_code"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
+  <Button android:id="@+id/join_invitational_dialog_join"
+	  android:layout_width="match_parent"
+	  android:layout_height="wrap_content"
+	  android:text="@string/join" />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      android:id="@+id/main_layout"
+	      android:orientation="vertical"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content">
+  <TextView android:id="@+id/main_premium_service"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:visibility="gone" />
+  <ListView android:id="@+id/main_games"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" />
+  <TextView android:id="@+id/main_help_text"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="@string/main_help_text"
+            android:visibility="gone" />
+</LinearLayout>

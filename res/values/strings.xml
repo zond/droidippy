@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="main_help_text">If you have not yet joined a game, press menu and \"Play\"!</string>
+  <string name="joining_is_serious_business_read_the_rules">Joining a game of dippy is serious business. If you are not prepared to follow through and play the game, committing every 24 hours, to the end (bitter or sweet) you will ruin it for your fellow players. If you are not familiar with how dippy is played, or if you want to freshen up a bit on the rules, you need to go to http://en.wikibooks.org/wiki/Diplomacy/Rules and read them.</string>
+  <string name="show_absolute_times">Show absolute times</string>
+  <string name="show_long_game_data">Show long game data</string>
+  <string name="custom_vibration">Custom vibration</string>
+  <string name="should_droidippy_vibrate_with_custom_patterns">Should Droidippy vibrate using a different pattern depending on type of event?</string>
+  <string name="ok">Ok</string>
+  <string name="clear_widget_notifications">Clear widget notifications</string>
+  <string name="remove_all_current_widget_notifications">Remove all currently showing widget notifications.</string>
+  <string name="end_year">End year</string>
+  <string name="classical_order_format">Classical order format</string>
+  <string name="should_droidippy_show_orders_in_classical_format">Should Droidippy show orders and results in the classical format?</string>
+  <string name="points_system">Scoring system</string>
+  <string name="positions">Positions</string>
+  <string name="preference_list">Preference list</string>
+  <string name="random">Random</string>
+  <string name="cancel">Cancel</string>
+  <string name="show_order_help">Show order help</string>
+  <string name="show_this_again">Show order help again</string>
+  <string name="should_droidippy_show_order_help">Should Droidippy show a short helpful message the first time you start giving an order?</string>
+  <string name="should_droidippy_show_absolute_times">Should Droidippy show absolute instead of relative times for timestamps and deadlines?</string>
+  <string name="should_droidippy_show_long_game_data">Should Droidippy show game data in the long format?</string>
+  <string name="you_must_allow_droidippy_to_authenticate">You must allow Droidippy to authenticate using your Google account if you want to play.</string>
+  <string name="joining_a_public_email_game">If joining regular games is serious business, then what does joining a \"public-email 1908\" game mean? The answer is even MORE serious business. Your Google account will be visible to everyone in the game, and a few other things will be different from the regular games too. See http://www.oort.se/2011/08/droidippy-gameplay-faq.html#public-email-1908 for a more thorough explanation.</string>
+  <string name="joining_is_serious_business">Joining is serious business</string>
+  <string name="big_brother_is_watching">Big brother is watching</string>
+  <string name="your_statistics_will_be_collected">Your reliability statistics will be collected, and you will find yourself playing with people of similar reliability. Keep the deadlines, and you will keep playing engaging and fun games!</string>
+  <string name="you_are_on_probation">You are on probation. Phases will resolve before deadline if everyone except you commit orders. Commit your orders before phase resolution to return to normal.</string>
+  <string name="select_draw_powers">Select draw powers</string>
+  <string name="what_powers_in_draw">For the game to end in a draw, every power not surrendering must concur about who the winners are. Not checking your own power is equivalent to surrendering specifically to the checked ones.</string>
+  <string name="game_id_copied">Game id copied to clipboard</string>
+  <string name="invitation_code_copied">Invitation code copied to clipboard</string>
+  <string name="version_code_copied">Version code copied to clipboard</string>
+  <string name="allow_invalid_orders">Allow invalid orders</string>
+  <string name="controls">Controls</string>
+  <string name="public_email">Public email</string>
+  <string name="draws_include_all_survivors">Draws include all survivors</string>
+  <string name="colors">Colors</string>
+  <string name="austria">Austria</string>
+  <string name="england">England</string>
+  <string name="france">France</string>
+  <string name="germany">Germany</string>
+  <string name="italy">Italy</string>
+  <string name="russia">Russia</string>
+  <string name="turkey">Turkey</string>
+  <string name="display">Display</string>
+  <string name="update">Update</string>
+  <string name="alias">Alias</string>
+  <string name="silenced">Silenced</string>
+  <string name="stats">Statistics</string>
+  <string name="game_settings">Game settings</string>
+  <string name="yes">Yes</string>
+  <string name="no">No</string>
+  <string name="changing_settings">Changing settings</string>
+  <string name="disable_notifications">Disable notifications</string>
+  <string name="error_account_missing">Droidippy: Google GCM can\'t find your Google account?</string>
+  <string name="error_authentication_failed">Droidippy: Google GCM needs you to update your Google account password.</string>
+  <string name="error_too_many_registrations">Droidippy: You have too many apps using GCM, to use Droidippy you must install some other app.</string>
+  <string name="error_phone_registration_error">Droidippy: Google GCM claims your phone does not support GCM?</string>
+  <string name="behaviour">Behaviour</string>
+  <string name="abide_by_these_rules">To make sure this game is enjoyable for you and your fellow players, everyone must abide by some simple rules. Mostly you can guess what they are, but in case you are uncertain you should go to http://www.oort.se/2011/08/droidippy-gameplay-faq.html#rules and read them.</string>
+  <string name="disable">Disable</string>
+  <string name="enable">Enable</string>
+  <string name="show_order_prompts">Show order prompts</string>
+  <string name="should_droidippy_show_order_prompts">Should Droidippy display a prompt when it expects you to finish giving an order?</string>
+  <string name="minimum_reliability">Minimum reliability</string>
+  <string name="time_ago">{0} ago</string>
+  <string name="enable_notifications">Enable notifications</string>
+  <string name="you_are_eliminated_in_this_game_disable_notifications">You are eliminated or stranded in this game. Do you want to disable notifications for new phases and conference messages?</string>
+  <string name="you_are_eliminated_in_this_game_enable_notifications">You are eliminated or stranded in this game. Do you want to enable notifications for new phases and conference messages?</string>
+  <string name="show_finished_games">Show finished games</string>
+  <string name="show_invitational_games">Show invitational games</string>
+  <string name="show_created_games">Show created games</string>
+  <string name="show_zoom_buttons">Show zoom buttons</string>
+  <string name="history">History</string>
+  <string name="should_droidippy_show_finished_games">Should Droidippy show finished games in your list of games?</string>
+  <string name="should_droidippy_show_invitational_games">Should Droidippy show invitational games in your list of games?</string>
+  <string name="should_droidippy_show_created_games">Should Droidippy show created games in your list of games?</string>
+  <string name="should_droidippy_show_zoom_buttons">Should Droidippy show zoom buttons on the map view?</string>
+  <string name="game_finished">Game finished</string>
+  <string name="irc_chat">IRC chat</string>
+  <string name="forum">Forum</string>
+  <string name="an_upgrade_is_recommended">Your version of Droidippy is outdated. It will still work, more or less, but upgrading is strongly recommended.;If you have already upgraded and still get this message, try to uninstall and reinstall Droidippy.;If you get this message and Android Market still doesn\'t have an updated version, go to http://droidippy.oort.se/web/static/Droidippy.apk to fetch it from the source.</string>
+  <string name="outdated_client">Outdated client</string>
+  <string name="private_chat">Private chat</string>
+  <string name="conference_chat">Conference chat</string>
+  <string name="phase_resolved">The phase has resolved</string>
+  <string name="phase_resolved_to_finished_game">The phase has resolved and the game has finished.</string>
+  <string name="phase_resolved_new_phase_created">The phase has resolved and a new phase has begun.</string>
+  <string name="previous_phase">&#x2190; phase</string>
+  <string name="next_phase">&#x2192; phase</string>
+  <string name="current_phase">&#x21E5; phase</string>
+  <string name="no_thanks">No thanks</string>
+  <string name="premium_service_valid_until">Premium service valid until {0}.</string>
+  <string name="premium_service_was_valid_until">Premium service was valid until {0}.</string>
+  <string name="is_finished">{0} is finished</string>
+  <string name="game_is_finished">Game is finished</string>
+  <string name="purchase_successful">Successfully purchased {0}</string>
+  <string name="purchase_cancelled">Cancelled purchase of {0}</string>
+  <string name="purchase_problem">The server seems to have a problem with your purchase of {0}. Contact info@oort.se and your problem will be solved, you will be reimbursed if needed and you will get sincere and profuse apologies.</string>
+  <string name="server_problem">The server seems to have a problem with what you just did. The developer has been contacted and will try to fix the error, but it would help if you sent an email to info@oort.se explaining what you did when it happened.</string>
+  <string name="server_unexpected">The server did not respond as expected to what you did. To get it fixed, you need to send an email to info@oort.se explaining what you did when it happened.</string>
+  <string name="purchasing_premium_service">Purchasing premium service</string>
+  <string name="new_phase">New phase</string>
+  <string name="premium_service">Premium service</string>
+  <string name="you_need_premium">You need premium service to start a new game while being part of an active one.</string>
+  <string name="connecting">Connecting</string>
+  <string name="are_you_sure">Are you sure?</string>
+  <string name="you_will_display_part_of_your_account">The part of your account before \"@\" will be displayed when you talk in the game chat. Still connect?</string>
+  <string name="error">Error</string>
+  <string name="no_orders">No orders</string>
+  <string name="invited">Invited</string>
+  <string name="leave_game">Leave game</string>
+  <string name="destroy_game">Destroy game</string>
+  <string name="destroy">Destroy</string>
+  <string name="leave">Leave</string>
+  <string name="leaving_game">Leaving game</string>
+  <string name="do_you_want_to_leave_this_game">Do you want to leave this game?</string>
+  <string name="do_you_want_to_destroy_the_game">Do you want to destroy this game?</string>
+  <string name="kick_member">Kick {0} from the game?</string>
+  <string name="not_found">Not found</string>
+  <string name="has_been_invited">{0} has been invited to the game.</string>
+  <string name="can_not_be_found">{0} can not be found. To receive invitations one needs to have logged in to the game at least once.</string>
+  <string name="accept">Accept</string>
+  <string name="on">On</string>
+  <string name="off">Off</string>
+  <string name="decline">Decline</string>
+  <string name="you_have_been_invited_to_a_game">You have been invited to a game of Droidippy by {0}.</string>
+  <string name="invites_you_to_a_game">{0} invites you to a game</string>
+  <string name="you_are_invited">You are invited</string>
+  <string name="game_is_started">The game is already started, you can\'t invite any more members.</string>
+  <string name="started">Started</string>
+  <string name="game_has_already_started">You accepted the invitation too late, the game has already started.</string>
+  <string name="view_orders">Orders</string>
+  <string name="view_results">Results</string>
+  <string name="intent">Intent</string>
+  <string name="help">Help</string>
+  <string name="faq">FAQ</string>
+  <string name="buy">Buy</string>
+  <string name="if_you_have_any_problems">Click the units in {0} to give orders. Use the big arrow left at the bottom to see your order list. Press \"Commit\" in the list to commit your orders. If you have any problems or questions, use the menu button and select \"Help\"!</string>
+  <string name="setting_intent">Setting intent</string>
+  <string name="you_are_banned">You are blacklisted, contact info@oort.se for more information.</string>
+  <string name="banned">You are blacklisted</string>  
+  <string name="select_intent">Select intent</string>
+  <string name="error_contacting_server">There was a problem contacting the server. Check your internet connection or try again later.</string>
+  <string name="should_droidippy_notify_you_audibly">Should Droidippy play a sound when game events occur?</string>
+  <string name="should_droidippy_notify_you">Should Droidippy notify you about events in the game?</string>
+  <string name="should_droidippy_vibrate">Should Droidippy vibrate the phone when game events occur?</string>
+  <string name="what_ringtone_should_droidippy_use">What ringtone should Droidippy use when game events occur?</string>
+  <string name="all_games">All games</string>
+  <string name="version">Version</string>
+  <string name="problem">Problem</string>
+  <string name="preferences">Preferences</string>
+  <string name="notifications">Notifications</string>
+  <string name="audio_notification">Audio notification</string>
+  <string name="vibrate">Vibrate</string>
+  <string name="notification_sound">Notification sound</string>
+  <string name="app_name">Droidippy</string>
+  <string name="register">Register</string>
+  <string name="play">Play</string>
+  <string name="the_game_uses_random_positions">The game uses random positions, and you will be randomly assigned a power to play.</string>
+  <string name="select_power_preferences_join">Before you can join a game you must rank the great powers in order of preference. Reorder the list on the left side, scroll it on the right.</string>
+  <string name="select_power_preferences_create">Before you can create a game you must rank the great powers in order of preference. Reorder the list on the left side, scroll it on the right.</string>
+  <string name="join_random_game">Join random game</string>
+  <string name="join_public_email">Join public-email 1908</string>
+  <string name="join_invitational_game">Join invitational game</string>
+  <string name="join_game">Join game</string>
+  <string name="no_such_game">No matching game found. Are you sure you entered the right invitation code?</string>
+  <string name="enter_the_invitation_code">Enter the invitation code below.</string>
+  <string name="create_game">Create game</string>
+  <string name="orders_needed">Orders needed:</string>
+  <string name="waiting_games">Waiting games:</string>
+  <string name="forming_games">Forming games:</string>
+  <string name="inviting">Inviting</string>
+  <string name="inviting_games">Invitational games:</string>
+  <string name="created_games">Created games:</string>
+  <string name="finished_games">Finished games:</string>
+  <string name="view_game">View game:</string>
+  <string name="game">Game</string>
+  <string name="invitational_game">Invitational game</string>
+  <string name="invite">Invite</string>
+  <string name="created_game">Created game</string>
+  <string name="deadline">Deadline</string>
+  <string name="logging_in">Logging in</string>
+  <string name="members">Members</string>
+  <string name="kick">Kick</string>
+  <string name="loading_games">Loading games</string>
+  <string name="registering">Registering</string>
+  <string name="logged_in_as">Logged in as</string>
+  <string name="unregister">Unregister</string>
+  <string name="invitation_code">Invitation code: {0}</string>
+  <string name="join">Join</string>
+  <string name="joined_invitational_game">You have joined an invitational game. The game will start as soon as enough other players have been found. You can cancel the game up until when it starts by long clicking it.</string>
+  <string name="joined_a_game">Joined a game</string>
+  <string name="created_a_game">Created a game</string>
+  <string name="created_a_game_invite_players">You have created a game. To get the game started you must invite players to it. Use the invite button or give them the invitation code to let them join. You can cancel the game up until when it starts by long clicking it.</string>
+  <string name="joined_a_game_it_will_show_up">You are signed up to join a game. The game will start as soon as enough other players have been found. This may take between a few hours and a few days, have faith.</string>
+  <string name="joining_game">Joining game</string>
+  <string name="creating_game">Creating game</string>
+  <string name="select_account">Select account</string>
+  <string name="must_have_google_account">A google account is required to use this app!</string>
+  <string name="commit">Commit</string>
+  <string name="uncommit">Uncommit</string>
+  <string name="committing_orders">Committing orders</string>
+  <string name="uncommitting_orders">Uncommitting orders</string>
+  <string name="conference">Conference</string>
+  <string name="anonymous">Anonymous</string>
+  <string name="negotiating_with">Negotiating with {0}</string>
+  <string name="build">Build</string>
+  <string name="fetching_messages">Fetching messages</string>
+  <string name="message_from_to">From {0} to {1}</string>
+  <string name="alias_message_from_to">{0}: From {1} to {2}</string>
+  <string name="send">Send</string>
+  <string name="send_anonymously">Anon</string>
+  <string name="order">Order</string>
+  <string name="remove">Remove</string>
+  <string name="waive">Waive</string>
+  <string name="convoy">Convoy</string>
+  <string name="hold">Hold</string>
+  <string name="move">Move</string>
+  <string name="move_via_convoy">Move via convoy</string>
+  <string name="support">Support</string>
+  <string name="disband">Disband</string>
+  <string name="retreat">Retreat</string>
+  <string name="enter_the_google_account">Enter the google account of the player you want to invite.</string>
+  <string name="enter_orders_on_the_map">Enter orders on the map to see them here.</string>
+  <string name="select_from_where_to_convoy">Select from where to convoy</string>
+  <string name="select_where_to_convoy">Select where to convoy</string>
+  <string name="select_where_to_move">Select where to move</string>
+  <string name="select_what_unit_to_support">Select what unit to support</string>
+  <string name="select_where_to_support_it">Select where to support it, or select the same unit again to support a Hold</string>
+  <string name="select_where_to_retreat">Select where to retreat</string>
+  <string name="select_order_type">Select order for {0}</string>
+  <string name="select_unit_type">Select unit type</string>
+  <string name="illegal_order">Illegal order</string>
+  <string name="expected_a_province">Expected a province? Cancelled action!</string>
+  <string name="too_old_client">This game client is too old, you have to upgrade!;If you have already upgraded and still get this message, try to uninstall and reinstall Droidippy.;If you get this message and Android Market still doesn\'t have an updated version, go to http://droidippy.oort.se/web/static/Droidippy.apk to fetch it from the source.</string>
+  <string name="billing_not_supported">You need premium service to start a new game while being part of an active one.;However your device does not seem to support In-app Billing. Go to http://droidippy.oort.se/web#you to buy premium service from the web.</string>
+  <string name="too_new_client">The game server does not yet support this game client, downgrade or wait for the server to be upgraded.</string>
+  <string name="bad_client_version">Bad client version</string>
+  <string name="loading_game_details">Loading game details</string>
+  <string name="must_select_convoy_source_with_army">Expected a province with an army present? Cancelled action!</string>
+  <string name="must_select_support_source_with_unit">Expected a province with a unit present? Cancelled action!</string>
+  <string name="long_click_sensitivity">Long click sensitivity</string>
+  <string name="how_sensitive_should_the_long_click_be">How sensitive should the long click on units on the map be to finger movements?</string>
+  <string name="how_large_should_the_fonts_be">How large should the fonts used in Droidippy be?</string>
+  <string name="font_sizes">Font sizes</string>
+  <string-array name="play_options">
+    <item>Join random game</item>
+    <item>Join public-email 1908</item>
+    <item>Join invitational game</item>
+    <item>Create game</item>
+  </string-array>
+  <string-array name="long_click_sensitivity_labels">
+    <item>Very sensitive</item>
+    <item>Sensitive</item>
+    <item>Normal</item>
+    <item>Forgiving</item>
+    <item>Very forgiving</item>
+    <item>Extremely forgiving</item>
+    <item>Insanely forgiving</item>
+  </string-array>
+  <string-array name="font_sizes">
+    <item>very small</item>
+    <item>small</item>
+    <item>normal</item>
+    <item>large</item>
+    <item>very large</item>
+  </string-array>
+  <string-array name="font_size_values">
+    <item>0.5625</item>
+    <item>0.75</item>
+    <item>1.0</item>
+    <item>1.333</item>
+    <item>1.778</item>
+  </string-array>
+  <string-array name="long_click_sensitivity_values">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+  </string-array>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/invite_member_dialog_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content">
+  <TextView android:id="@+id/invite_member_dialog_explanation"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="18sp"
+	    android:padding="10dp"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/enter_the_google_account" />
+  <EditText android:id="@+id/invite_member_dialog_email"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/invite_member_dialog_explanation" />
+  <Button android:id="@+id/invite_member_dialog_invite"
+	  android:layout_width="match_parent"
+	  android:layout_height="wrap_content"
+	  android:layout_below="@+id/invite_member_dialog_email"
+	  android:text="@string/invite" />
+</RelativeLayout>
