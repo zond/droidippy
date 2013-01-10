@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	  package="cx.ath.troja.droidippy"
 	  android:versionCode="178"
-	  android:versionName="3.105">
+	  android:versionName="3.107">
   <!-- GCM permissions -->
   <permission android:name="cx.ath.troja.droidippy.permission.C2D_MESSAGE" 
 	      android:protectionLevel="signature" />
