@@ -7,6 +7,8 @@
 	android:title="@string/irc_chat" />
   <item android:id="@+id/main_menu_forum"
 	android:title="@string/forum" />
+  <item android:id="@+id/main_menu_invitation_games"
+	android:title="@string/invitational_games" />
   <item android:id="@+id/main_menu_stats"
 	android:title="@string/stats" />
   <item android:id="@+id/help"

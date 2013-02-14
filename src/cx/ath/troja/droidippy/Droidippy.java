@@ -552,6 +552,10 @@ public class Droidippy extends BaseActivity {
 	    Intent statsIntent = new Intent(getApplicationContext(), Statistics.class);
 	    startActivity(statsIntent);
 	    return true;
+        case R.id.main_menu_invitation_games:
+	    Intent invitationGamesIntent = new Intent(getApplicationContext(), InvitationGames.class);
+	    startActivity(invitationGamesIntent);
+            return true;
         case R.id.main_menu_forum:
 	    Intent forumIntent = new Intent(getApplicationContext(), Forum.class);
 	    startActivity(forumIntent);

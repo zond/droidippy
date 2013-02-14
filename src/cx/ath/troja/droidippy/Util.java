@@ -57,8 +57,8 @@ public class Util {
   protected static final String LOAD_DETAILS_PATTERN = BASE_URL + "/game/details/{0}";
   protected static final String LOAD_PHASE_PATTERN = BASE_URL + "/game/details/{0}/{1}";
   protected static final String SEND_ORDER_URL = BASE_URL + "/order/send";
-  protected static final String COMMIT_ORDERS_FORMAT = BASE_URL + "/orders/commit/{0}";
-  protected static final String UNCOMMIT_ORDERS_FORMAT = BASE_URL + "/orders/uncommit/{0}";
+  protected static final String COMMIT_ORDERS_FORMAT = BASE_URL + "/orders/commit/{0}/{1}";
+  protected static final String UNCOMMIT_ORDERS_FORMAT = BASE_URL + "/orders/uncommit/{0}/{1}";
   protected static final String GET_MESSAGES_FORMAT = BASE_URL + "/messages/{0}/{1}";
   protected static final String UPDATE_END_YEAR_FORMAT = BASE_URL + "/game/update/endYear/{0}/{1}";
   protected static final String UPDATE_POINTS_SYSTEM_FORMAT = BASE_URL + "/game/update/pointsSystem/{0}/{1}";
@@ -233,6 +233,7 @@ public class Util {
   protected static final String NOTIFICATION_SOUND_DEFAULT = "Default";
   protected static final String HELP_URI = "http://www.oort.se/2011/04/droidippy-help.html?m=1";
   protected static final String FORUM_URI = "http://groups.google.com/group/droidippy";
+  protected static final String INVITATION_GAMES_URI = "http://groups.google.com/group/droidippy-invitations";
   protected static final String STATS_URI = "http://droidippy.oort.se/m/you";
   protected static final String PAYMENT_INFO_URI = "http://www.oort.se/2011/08/droidippy-gameplay-faq.html#payment";
   protected static final String MEMBERS_OF_MAX_FORMAT = "({0}/{1} members)";

@@ -613,7 +613,7 @@ public class Game implements Serializable {
   }
 
   public void commit(Context context, final Doable<String> whenDone, Doable<RuntimeException> onError) {
-    new Getter<String>(context, MessageFormat.format(COMMIT_ORDERS_FORMAT, "" + id)).onResult(new Doable<String>() {
+    new Getter<String>(context, MessageFormat.format(COMMIT_ORDERS_FORMAT, "" + id, "" + phaseOrdinal)).onResult(new Doable<String>() {
       public void doit(String o) {
 	memberState = COMMITTED;
 	whenDone.doit(o);
@@ -622,7 +622,7 @@ public class Game implements Serializable {
   }
 
   public void uncommit(Context context, final Doable<String> whenDone, Doable<RuntimeException> onError) {
-    new Getter<String>(context, MessageFormat.format(UNCOMMIT_ORDERS_FORMAT, "" + id)).onResult(new Doable<String>() {
+    new Getter<String>(context, MessageFormat.format(UNCOMMIT_ORDERS_FORMAT, "" + id, "" + phaseOrdinal)).onResult(new Doable<String>() {
       public void doit(String o) {
 	memberState = UNCOMMITTED;
 	whenDone.doit(o);

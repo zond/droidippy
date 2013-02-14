@@ -17,6 +17,7 @@ import android.text.util.*;
 import android.text.method.*;
 
 import java.util.*;
+import java.util.concurrent.atomic.*;
 import java.text.*;
 
 import static cx.ath.troja.droidippy.Util.*;
@@ -418,6 +419,7 @@ public class ViewGame extends BaseActivity {
   }
 
   private Game game;
+  private AtomicInteger ordersInFlight = new AtomicInteger(0);
   private List<Drawable> layersWithOrders = null;
   private List<Drawable> layersWithoutOrders = null;
   private Drawable mapImage = null;
@@ -506,8 +508,13 @@ public class ViewGame extends BaseActivity {
     visualizeOrder(order);
     if (order.done()) {
       zoomListener.waitingOrder = null;
+      ordersInFlight.getAndIncrement();
       game.execute(this, order, new HandlerDoable<Object>() {
 	public void handle(Object o) {
+	  synchronized(ordersInFlight) {
+	    ordersInFlight.getAndDecrement();
+	    ordersInFlight.notifyAll();
+	  }
 	  layersWithOrders = null;
 	  mapImage = null;
 	  setMap(generateMap());
@@ -515,6 +522,10 @@ public class ViewGame extends BaseActivity {
       }, STD_ERROR_HANDLER, 
       new HandlerDoable<String>() {
 	public void handle(String s) {
+	  synchronized(ordersInFlight) {
+	    ordersInFlight.getAndDecrement();
+	    ordersInFlight.notifyAll();
+	  }
 	  if (s != null) {
 	    toast(capitalize(game.provincify(s)));
 	  }
@@ -1040,6 +1051,14 @@ public class ViewGame extends BaseActivity {
 	  commitButton.setOnClickListener(new View.OnClickListener() {
 	    public void onClick(View v) {
 	      commitButton.setEnabled(false);
+	      synchronized(ordersInFlight) {
+		while (ordersInFlight.get() > 0) {
+		  try {
+		    ordersInFlight.wait();
+		  } catch (InterruptedException e) {
+		  }
+		}
+	      }
 	      if (getResources().getString(R.string.commit).equals(commitButton.getText().toString())) {
 		showProgress(R.string.committing_orders);
 		game.commit(getApplicationContext(), new HandlerDoable<String>() {
