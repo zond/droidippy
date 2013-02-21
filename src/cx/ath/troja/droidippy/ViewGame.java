@@ -509,12 +509,11 @@ public class ViewGame extends BaseActivity {
     if (order.done()) {
       zoomListener.waitingOrder = null;
       ordersInFlight.getAndIncrement();
+      updateCommitButton();
       game.execute(this, order, new HandlerDoable<Object>() {
 	public void handle(Object o) {
-	  synchronized(ordersInFlight) {
-	    ordersInFlight.getAndDecrement();
-	    ordersInFlight.notifyAll();
-	  }
+	  ordersInFlight.getAndDecrement();
+	  updateCommitButton();
 	  layersWithOrders = null;
 	  mapImage = null;
 	  setMap(generateMap());
@@ -522,10 +521,8 @@ public class ViewGame extends BaseActivity {
       }, STD_ERROR_HANDLER, 
       new HandlerDoable<String>() {
 	public void handle(String s) {
-	  synchronized(ordersInFlight) {
-	    ordersInFlight.getAndDecrement();
-	    ordersInFlight.notifyAll();
-	  }
+	  ordersInFlight.getAndDecrement();
+	  updateCommitButton();
 	  if (s != null) {
 	    toast(capitalize(game.provincify(s)));
 	  }
@@ -1016,6 +1013,32 @@ public class ViewGame extends BaseActivity {
     loadNextPhase();
   }
 
+  private void updateCommitButton() {
+    Button commitButton = (Button) findViewById(R.id.view_orders_commit);
+    if (commitButton != null) {
+      int wantedText = R.string.commit;
+      int flying = ordersInFlight.get();
+      if (flying > 0) {
+	wantedText = R.string.unsaved_orders;
+      } else {
+	if (game.needsOrders) {
+	  if (game.resolved || FINISHED.equals(game.gameState)) {
+	    wantedText = R.string.no_orders;
+	  } else {
+	    if (COMMITTED.equals(game.memberState)) {
+	      wantedText = R.string.uncommit;
+	    } else {
+	      wantedText = R.string.commit;
+	    }
+	  }
+	} else {
+	  wantedText = R.string.no_orders;
+	}
+      }
+      commitButton.setText(wantedText);
+    }
+  }
+
   private void prepareOrders() {
     TextView orderView = ((TextView) findViewById(R.id.view_orders_text));
     if (orderView != null) {
@@ -1036,35 +1059,23 @@ public class ViewGame extends BaseActivity {
 	phaseMessage.setVisibility(View.GONE);
       }
       orderView.setText(game.renderOrders(this));
+      updateCommitButton();
       final Button commitButton = (Button) findViewById(R.id.view_orders_commit);
       if (game.needsOrders) {
 	if (game.resolved || FINISHED.equals(game.gameState)) {
 	  commitButton.setEnabled(false);
-	  commitButton.setText(R.string.no_orders);
 	} else {
 	  commitButton.setEnabled(true);
-	  if (COMMITTED.equals(game.memberState)) {
-	    commitButton.setText(R.string.uncommit);
-	  } else {
-	    commitButton.setText(R.string.commit);
-	  }
 	  commitButton.setOnClickListener(new View.OnClickListener() {
 	    public void onClick(View v) {
 	      commitButton.setEnabled(false);
-	      synchronized(ordersInFlight) {
-		while (ordersInFlight.get() > 0) {
-		  try {
-		    ordersInFlight.wait();
-		  } catch (InterruptedException e) {
-		  }
-		}
-	      }
 	      if (getResources().getString(R.string.commit).equals(commitButton.getText().toString())) {
 		showProgress(R.string.committing_orders);
 		game.commit(getApplicationContext(), new HandlerDoable<String>() {
 		  public void handle(String result) {
-		    hideProgress();		
-		    commitButton.setText(R.string.uncommit);
+		    hideProgress();
+		    game.memberState = COMMITTED;
+		    updateCommitButton();
 		    commitButton.setEnabled(true);
 		  }
 		}, STD_ERROR_HANDLER);
@@ -1073,7 +1084,8 @@ public class ViewGame extends BaseActivity {
 		game.uncommit(getApplicationContext(), new HandlerDoable<String>() {
 		  public void handle(String result) {
 		    hideProgress();		
-		    commitButton.setText(R.string.commit);
+		    game.memberState = UNCOMMITTED;
+		    updateCommitButton();
 		    commitButton.setEnabled(true);
 		  }
 		}, STD_ERROR_HANDLER);
@@ -1085,7 +1097,6 @@ public class ViewGame extends BaseActivity {
 	}
       } else {
 	commitButton.setEnabled(false);
-	commitButton.setText(R.string.no_orders);
       }
     }
   }

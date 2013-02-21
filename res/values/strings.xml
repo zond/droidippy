@@ -110,6 +110,7 @@
   <string name="are_you_sure">Are you sure?</string>
   <string name="you_will_display_part_of_your_account">The part of your account before \"@\" will be displayed when you talk in the game chat. Still connect?</string>
   <string name="error">Error</string>
+  <string name="unsaved_orders">Unsaved orders</string>
   <string name="no_orders">No orders</string>
   <string name="invited">Invited</string>
   <string name="leave_game">Leave game</string>
