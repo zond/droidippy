@@ -1089,6 +1089,8 @@ public class ViewGame extends BaseActivity {
 		    commitButton.setEnabled(true);
 		  }
 		}, STD_ERROR_HANDLER);
+	      } else if (getResources().getString(R.string.unsaved_orders).equals(commitButton.getText().toString())) {
+		toast(R.string.wait_until_all_orders_are_saved);
 	      } else {
 		throw new RuntimeException("Button should always show commit or uncommit in an active phase where the member needs orders!");
 	      }

@@ -17,6 +17,7 @@
   <string name="preference_list">Preference list</string>
   <string name="random">Random</string>
   <string name="cancel">Cancel</string>
+  <string name="wait_until_all_orders_are_saved">Wait until all orders are saved</string>
   <string name="show_order_help">Show order help</string>
   <string name="show_this_again">Show order help again</string>
   <string name="should_droidippy_show_order_help">Should Droidippy show a short helpful message the first time you start giving an order?</string>
