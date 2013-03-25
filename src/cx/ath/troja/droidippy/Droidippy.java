@@ -194,7 +194,10 @@ public class Droidippy extends BaseActivity {
 	deadlines.put("36h", 36 * 60 * 60 * 1000l);
 	deadlines.put("48h", 48 * 60 * 60 * 1000l);
 	deadlines.put("72h", 72 * 60 * 60 * 1000l);
-	deadlines.put("96h", 96 * 60 * 60 * 1000l);
+	deadlines.put("4d", 4 * 24 * 60 * 60 * 1000l);
+	deadlines.put("6d", 6 *24 * 60 * 60 * 1000l);
+	deadlines.put("10d", 10 * 24 * 60 * 60 * 1000l);
+	deadlines.put("14d", 14 * 24 * 60 * 60 * 1000l);
     }
     private static final Map<Long, String> reverseDeadlines = new HashMap<Long, String>();
     static {
