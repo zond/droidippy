@@ -540,7 +540,7 @@ public class Util {
   }
 
   protected static String getAccountName(Context context) {
-    return getPreferences(context).getString(ACCOUNT_NAME, null);
+    return getPreferences(context).getString(ACCOUNT_NAME, null).toLowerCase();
   }
 
   protected static Account getAccount(Context context) {
@@ -550,7 +550,7 @@ public class Util {
   protected static Account getAccount(Context context, String accountName) {
     Account[] googleAccounts = AccountManager.get(context).getAccountsByType(GOOGLE_ACCOUNT_TYPE);
     for (int i = 0; i < googleAccounts.length; i++) {
-      if (accountName.equals(googleAccounts[i].name)) {
+      if (accountName.equalsIgnoreCase(googleAccounts[i].name)) {
 	return googleAccounts[i];
       }
     }
@@ -589,7 +589,7 @@ public class Util {
 
   protected static void setAccountName(Context context, String s) {
     SharedPreferences.Editor edit = getEditor(context);
-    edit.putString(ACCOUNT_NAME, s);
+    edit.putString(ACCOUNT_NAME, s.toLowerCase());
     edit.commit();
   }
 
