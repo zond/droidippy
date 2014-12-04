@@ -402,18 +402,6 @@ public class Droidippy extends BaseActivity {
 	    ((TextView) dialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 	}
 	setTitle(getApplicationContext().getResources().getString(R.string.app_name) + " <" + ("" + data.get("email")).trim() + ">" + (DEBUG_MODE ? " [debug]" : ""));
-	if (data.containsKey(PREMIUM_SERVICE_UNTIL)) {
-	    Date until = new Date((Long) data.get(PREMIUM_SERVICE_UNTIL));
-	    if (until.compareTo(new Date()) < 0) {
-		((TextView) findViewById(R.id.main_premium_service)).setText(MessageFormat.format(getResources().getString(R.string.premium_service_was_valid_until), DateFormat.getDateInstance().format(until)));
-	    } else {
-		((TextView) findViewById(R.id.main_premium_service)).setText(MessageFormat.format(getResources().getString(R.string.premium_service_valid_until), DateFormat.getDateInstance().format(until)));
-		premiumService = true;
-	    }
-	    findViewById(R.id.main_premium_service).setVisibility(View.VISIBLE);
-	} else {
-	    findViewById(R.id.main_premium_service).setVisibility(View.GONE);
-	}
 	if (data.containsKey(RELIABILITY)) {
 	    reliability = Float.parseFloat("" + data.get(RELIABILITY));
 	}
@@ -629,7 +617,6 @@ public class Droidippy extends BaseActivity {
 			new AlertDialog.Builder(Droidippy.this).setMessage(R.string.created_a_game_invite_players).setTitle(R.string.created_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
 		    }
 	    }).
-	    onError(402, PAYMENT_REQUIRED_HANDLER).
 	    onError(STD_ERROR_HANDLER).start();
     }
 
@@ -657,7 +644,6 @@ public class Droidippy extends BaseActivity {
                         }
                     }
                 }).
-	    onError(402, PAYMENT_REQUIRED_HANDLER).
 	    onError(404, new HandlerDoable<String>() {
 		    public void handle(String s) {
 			hideProgress();
@@ -677,7 +663,6 @@ public class Droidippy extends BaseActivity {
 			new AlertDialog.Builder(Droidippy.this).setMessage(R.string.joined_a_game_it_will_show_up).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
 		    }
 	    }).
-	    onError(402, PAYMENT_REQUIRED_HANDLER).
 	    onError(STD_ERROR_HANDLER).start();
     }
 
@@ -691,7 +676,6 @@ public class Droidippy extends BaseActivity {
 			new AlertDialog.Builder(Droidippy.this).setMessage(R.string.joined_a_game_it_will_show_up).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
 		    }
 	    }).
-	    onError(402, PAYMENT_REQUIRED_HANDLER).
 	    onError(STD_ERROR_HANDLER).start();
     }
 
