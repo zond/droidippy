@@ -614,7 +614,8 @@ public class Droidippy extends BaseActivity {
 				public void handle(Object s) {
 					hideProgress();
 					fetchGames();
-					new AlertDialog.Builder(Droidippy.this).setMessage(R.string.created_a_game_invite_players).setTitle(R.string.created_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					final AlertDialog d = new AlertDialog.Builder(Droidippy.this).setMessage(Html.fromHtml(getResources().getString(R.string.created_a_game_invite_players))).setTitle(R.string.created_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					((TextView)d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 				}
 			}).
 		onError(STD_ERROR_HANDLER).start();
@@ -629,7 +630,8 @@ public class Droidippy extends BaseActivity {
 					if (!INVITING.equals(s) && !STARTED.equals(s)) {
 						toast(R.string.game_has_already_started);
 					} else {
-						new AlertDialog.Builder(Droidippy.this).setTitle(R.string.joined_a_game).setMessage(R.string.joined_invitational_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+						final AlertDialog d = new AlertDialog.Builder(Droidippy.this).setTitle(R.string.joined_a_game).setMessage(Html.fromHtml(getResources().getString(R.string.joined_invitational_game))).setNeutralButton(R.string.ok, new OkClickable()).show();
+						((TextView)d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 					}
 				}
 			}).
@@ -660,7 +662,8 @@ public class Droidippy extends BaseActivity {
 				public void handle(Object s) {
 					hideProgress();
 					fetchGames();
-					new AlertDialog.Builder(Droidippy.this).setMessage(R.string.joined_a_game_it_will_show_up).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					final AlertDialog d = new AlertDialog.Builder(Droidippy.this).setMessage(Html.fromHtml(getResources().getString(R.string.joined_a_game_it_will_show_up))).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					((TextView)d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 				}
 			}).
 		onError(STD_ERROR_HANDLER).start();
@@ -673,7 +676,8 @@ public class Droidippy extends BaseActivity {
 				public void handle(Object s) {
 					hideProgress();
 					fetchGames();
-					new AlertDialog.Builder(Droidippy.this).setMessage(R.string.joined_a_game_it_will_show_up).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					final AlertDialog d = new AlertDialog.Builder(Droidippy.this).setMessage(Html.fromHtml(getResources().getString(R.string.joined_a_game_it_will_show_up))).setTitle(R.string.joined_a_game).setNeutralButton(R.string.ok, new OkClickable()).show();
+					((TextView)d.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
 				}
 			}).
 		onError(STD_ERROR_HANDLER).start();
