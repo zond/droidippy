@@ -92,7 +92,6 @@ public class ViewInvitation extends BaseActivity {
 			finish();
 		    }
 		}).
-	    onError(402, PAYMENT_REQUIRED_HANDLER).
 	    onError(STD_ERROR_HANDLER).start();
     }
     

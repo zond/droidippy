@@ -4,10 +4,6 @@
 	      android:orientation="vertical"
 	      android:layout_width="match_parent"
 	      android:layout_height="wrap_content">
-  <TextView android:id="@+id/main_premium_service"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:visibility="gone" />
   <ListView android:id="@+id/main_games"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content" />

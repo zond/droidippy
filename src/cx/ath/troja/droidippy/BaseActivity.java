@@ -116,20 +116,10 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 	protected static boolean premiumService = false;
 	protected static float reliability = 0f;
 
-	private Boolean billingSupported = null;
-	private BillingService.BillingBinder binder = null;
-
 	protected final Doable<RuntimeException> STD_ERROR_HANDLER = new HandlerDoable<RuntimeException>() {
 		public void handle(RuntimeException e) {
 			hideProgress();
 			error(e, true);
-		}
-	};
-
-	protected final Doable<String> PAYMENT_REQUIRED_HANDLER = new HandlerDoable<String>() {
-		public void handle(String s) {
-			hideProgress();
-			requirePayment();
 		}
 	};
 
@@ -152,53 +142,7 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 
 	@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
-			binder = (BillingService.BillingBinder) service;
-			binder.checkBillingSupported(new Doable<Boolean>() {
-				public void doit(Boolean result) {
-					billingSupported = result;
-				}
-			});
 		}
-
-	private void bindBillingService() {
-		bindService(new Intent(this, BillingService.class), this, Context.BIND_AUTO_CREATE);
-	}
-
-	private void requirePayment() {
-		if (billingSupported != null && billingSupported.booleanValue()) {
-			new AlertDialog.Builder(BaseActivity.this).
-				setTitle(R.string.you_need_premium).
-				setNeutralButton(R.string.no_thanks, new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				}).
-			setSingleChoiceItems(new ArrayAdapter<PurchaseOption>(BaseActivity.this, R.layout.small_spinner_item, PURCHASE_OPTIONS), -1, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.dismiss();
-					PurchaseOption selected = PURCHASE_OPTIONS[which];
-					if ("info".equals(selected.id)) {
-						Intent stats = new Intent(Intent.ACTION_VIEW, Uri.parse(PAYMENT_INFO_URI));
-						startActivity(stats);
-					} else {
-						purchaseSubscribers.put(BaseActivity.this, new Object());
-						binder.requestPurchase(BaseActivity.this, PURCHASE_OPTIONS[which].id);
-					}
-				}
-			}).
-			show();
-		} else {
-			SpannableString message = new SpannableString(getResources().getString(R.string.billing_not_supported).replace(";", "\n"));
-			Linkify.addLinks(message, Linkify.ALL);
-			AlertDialog dialog = new AlertDialog.Builder(BaseActivity.this).setMessage(message).setTitle(R.string.premium_service).setNeutralButton(R.string.ok, new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.dismiss();
-				}
-			}).create();
-			dialog.show();
-			((TextView) dialog.findViewById(android.R.id.message)).setMovementMethod(LinkMovementMethod.getInstance());
-		}
-	}
 
 	protected void vibrate(int ms) {
 		if (new Settings.System().getInt(this.getContentResolver(),    
@@ -209,14 +153,12 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 
 	@Override
 		public void onServiceDisconnected(ComponentName name) {
-			bindBillingService();
 		}
 
 	@Override
 		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			handler = new Handler();
-			bindBillingService();
 		}
 
 	@Override

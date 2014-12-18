@@ -94,8 +94,6 @@
   <string name="next_phase">&#x2192; phase</string>
   <string name="current_phase">&#x21E5; phase</string>
   <string name="no_thanks">No thanks</string>
-  <string name="premium_service_valid_until">Premium service valid until {0}.</string>
-  <string name="premium_service_was_valid_until">Premium service was valid until {0}.</string>
   <string name="is_finished">{0} is finished</string>
   <string name="game_is_finished">Game is finished</string>
   <string name="purchase_successful">Successfully purchased {0}</string>
@@ -103,10 +101,7 @@
   <string name="purchase_problem">The server seems to have a problem with your purchase of {0}. Contact info@oort.se and your problem will be solved, you will be reimbursed if needed and you will get sincere and profuse apologies.</string>
   <string name="server_problem">The server seems to have a problem with what you just did. The developer has been contacted and will try to fix the error, but it would help if you sent an email to info@oort.se explaining what you did when it happened.</string>
   <string name="server_unexpected">The server did not respond as expected to what you did. To get it fixed, you need to send an email to info@oort.se explaining what you did when it happened.</string>
-  <string name="purchasing_premium_service">Purchasing premium service</string>
   <string name="new_phase">New phase</string>
-  <string name="premium_service">Premium service</string>
-  <string name="you_need_premium">You need premium service to start a new game while being part of an active one.</string>
   <string name="connecting">Connecting</string>
   <string name="are_you_sure">Are you sure?</string>
   <string name="you_will_display_part_of_your_account">The part of your account before \"@\" will be displayed when you talk in the game chat. Still connect?</string>
@@ -240,7 +235,6 @@
   <string name="illegal_order">Illegal order</string>
   <string name="expected_a_province">Expected a province? Cancelled action!</string>
   <string name="too_old_client">This game client is too old, you have to upgrade!;If you have already upgraded and still get this message, try to uninstall and reinstall Droidippy.;If you get this message and Android Market still doesn\'t have an updated version, go to http://droidippy.oort.se/web/static/Droidippy.apk to fetch it from the source.</string>
-  <string name="billing_not_supported">You need premium service to start a new game while being part of an active one.;However your device does not seem to support In-app Billing. Go to http://droidippy.oort.se/web#you to buy premium service from the web.</string>
   <string name="too_new_client">The game server does not yet support this game client, downgrade or wait for the server to be upgraded.</string>
   <string name="bad_client_version">Bad client version</string>
   <string name="loading_game_details">Loading game details</string>
