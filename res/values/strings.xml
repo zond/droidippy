@@ -195,11 +195,11 @@
   <string name="unregister">Unregister</string>
   <string name="invitation_code">Invitation code: {0}</string>
   <string name="join">Join</string>
-  <string name="joined_invitational_game">You have joined an invitational game. The game will start as soon as enough other players have been found. You can cancel the game up until when it starts by long clicking it.</string>
+	<string name="joined_invitational_game"><p>You have joined an invitational game. The game will start as soon as enough other players have been found. You can cancel the game up until when it starts by long clicking it.</p><p>Please support the hosting, administration, moderation and development of online dippy resources by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FR2UWF3XNZE72">donating</a>.</p></string>
   <string name="joined_a_game">Joined a game</string>
   <string name="created_a_game">Created a game</string>
-  <string name="created_a_game_invite_players">You have created a game. To get the game started you must invite players to it. Use the invite button or give them the invitation code to let them join. You can cancel the game up until when it starts by long clicking it.</string>
-  <string name="joined_a_game_it_will_show_up">You are signed up to join a game. The game will start as soon as enough other players have been found. This may take between a few hours and a few days, have faith.</string>
+	<string name="created_a_game_invite_players"><p>You have created a game. To get the game started you must invite players to it. Use the invite button or give them the invitation code to let them join. You can cancel the game up until when it starts by long clicking it.<p/><p>Please support the hosting, administration, moderation and development of online dippy resources by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FR2UWF3XNZE72">donating</a>.</p></string>
+	<string name="joined_a_game_it_will_show_up"><p>You are signed up to join a game. The game will start as soon as enough other players have been found. This may take between a few hours and a few days, have faith.</p><p>Please support the hosting, administration, moderation and development of online dippy resources by <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FR2UWF3XNZE72">donating</a>.</p></string>
   <string name="joining_game">Joining game</string>
   <string name="creating_game">Creating game</string>
   <string name="select_account">Select account</string>
