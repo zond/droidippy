@@ -374,12 +374,6 @@ public class Droidippy extends BaseActivity {
 		}
 	}
 
-	@Override
-		protected void verificationResult(String result, String productName) {
-			super.verificationResult(result, productName);
-			fetchGames();
-		}
-
 	private void parseGames(Map<String, Object> data) {
 		DEBUG_MODE = "true".equals(data.get("debug_mode"));
 		int recommendedVersion = Integer.parseInt("" + data.get(RECOMMENDED_VERSION));

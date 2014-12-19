@@ -26,13 +26,6 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 	public static Boolean absoluteTimes = false;
 	public static Boolean longGameData = true;
 
-	public static ConcurrentMap<BaseActivity, Object> purchaseSubscribers = new ConcurrentHashMap<BaseActivity, Object>();
-
-	public static void deliverVerificationResult(String result, String productName) {
-		for (BaseActivity activity : purchaseSubscribers.keySet()) {
-			activity.verificationResult(result, productName);
-		}
-	}
 
 	public interface Cancellable {
 		public void cancel();
@@ -89,23 +82,6 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 	}
 
 
-	private static class PurchaseOption {
-		public String id;
-		public String name;
-		public PurchaseOption(String id, String name) {
-			this.id = id;
-			this.name = name;
-		}
-		public String toString() {
-			return name;
-		}
-	}
-
-	public static PurchaseOption[] PURCHASE_OPTIONS = new PurchaseOption[] { 
-		new PurchaseOption("cx.ath.troja.droidippy.month", "Buy one month for $2"),
-				new PurchaseOption("cx.ath.troja.droidippy.year", "Buy one year for $12"),
-				new PurchaseOption("info", "Info about payment")
-	};
 	/**
 	 * The handler that our new threads use to make us do stuff
 	 */
@@ -122,23 +98,6 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 			error(e, true);
 		}
 	};
-
-	protected void verificationResult(final String result, final String productName) {
-		purchaseSubscribers.remove(this);
-		handler.post(new Runnable() {
-			public void run() {
-				if (PURCHASE_OK.equals(result)) {
-					toast(MessageFormat.format(getResources().getString(R.string.purchase_successful), productName));
-				} else if (CANCEL_OK.equals(result)) {
-					toast(MessageFormat.format(getResources().getString(R.string.purchase_cancelled), productName));
-				} else if (ERROR.equals(result)) {
-					toast(MessageFormat.format(getResources().getString(R.string.purchase_problem), productName));
-				} else {
-					throw new RuntimeException("Unknown purchase verification result: " + result + " for " + productName);
-				}
-			}
-		});
-	}
 
 	@Override
 		public void onServiceConnected(ComponentName name, IBinder service) {
@@ -239,11 +198,9 @@ public abstract class BaseActivity extends Activity implements ServiceConnection
 
 	@Override
 		protected void onDestroy() {
-			purchaseSubscribers.remove(this);
 			for (Cancellable c : cancellables) {
 				c.cancel();
 			}
-			unbindService(this);
 			super.onDestroy();
 		}
 
