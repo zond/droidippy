@@ -4,6 +4,6 @@ public class LocalOptions {
 
     public static final String BASE_DOMAIN = "@BASE_DOMAIN@";
     public static final String BASE_PORT = "@BASE_PORT@";
-    public static final String MTN_REVISION = "@MTN_REVISION@";
+    public static final String GIT_REVISION = "@GIT_REVISION@";
 
 }

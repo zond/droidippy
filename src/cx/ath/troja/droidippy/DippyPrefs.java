@@ -16,7 +16,7 @@ public class DippyPrefs extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 	addPreferencesFromResource(R.xml.preferences);
-	final String revision = packageInfo(this).versionName + "/" + LocalOptions.MTN_REVISION;
+	final String revision = packageInfo(this).versionName + "/" + LocalOptions.GIT_REVISION;
 	findPreference("revision").setSummary(revision);
 	findPreference("revision").setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 		public boolean onPreferenceClick(Preference preference) {

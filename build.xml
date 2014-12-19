@@ -123,9 +123,9 @@
 </target>
 
 <target name="copy_local_options">
-  <exec executable="mtn" outputproperty="mtn.revision">
-    <arg value="automate" />
-    <arg value="heads" />
+  <exec executable="git" outputproperty="git.revision">
+    <arg value="rev-parse" />
+    <arg value="HEAD" />
   </exec>
   <copy file="${source.dir}/../java/LocalOptions.java.template"
 	overwrite="true"
@@ -133,7 +133,7 @@
     <filterset>
       <filter token="BASE_DOMAIN" value="${base.domain}"/>
       <filter token="BASE_PORT" value="${base.port}"/>
-      <filter token="MTN_REVISION" value="${mtn.revision}"/>
+      <filter token="GIT_REVISION" value="${git.revision}"/>
     </filterset>
   </copy>
 </target>
