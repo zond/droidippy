@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	  package="cx.ath.troja.droidippy"
-	  android:versionCode="188"
-	  android:versionName="4.3">
+	  android:versionCode="189"
+	  android:versionName="4.4">
   <!-- GCM permissions -->
   <permission android:name="cx.ath.troja.droidippy.permission.C2D_MESSAGE" 
 	      android:protectionLevel="signature" />
