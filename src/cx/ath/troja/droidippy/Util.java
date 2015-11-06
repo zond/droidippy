@@ -43,7 +43,7 @@ public class Util {
    */
   protected static final String BASE_DOMAIN = LocalOptions.BASE_DOMAIN;
   protected static final String BASE_HOST_WITH_PORT = BASE_DOMAIN + ":" + LocalOptions.BASE_PORT;
-  protected static final String BASE_URL = "https://" + BASE_HOST_WITH_PORT + "/android";
+  protected static final String BASE_URL = "http://" + BASE_HOST_WITH_PORT + "/android";
   protected static final String REGISTER_URL_FORMAT = BASE_URL + "/register/{0}/{1}";
   protected static final String SET_INTENT_URL_FORMAT = BASE_URL + "/intend/{0}";
   protected static final String LOGIN_URL = BASE_URL + "/login";
