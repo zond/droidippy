@@ -98,9 +98,9 @@
   <string name="game_is_finished">Game is finished</string>
   <string name="purchase_successful">Successfully purchased {0}</string>
   <string name="purchase_cancelled">Cancelled purchase of {0}</string>
-  <string name="purchase_problem">The server seems to have a problem with your purchase of {0}. Contact droidippy-mod@oort.se and your problem will be solved, you will be reimbursed if needed and you will get sincere and profuse apologies.</string>
-  <string name="server_problem">The server seems to have a problem with what you just did. The developer has been contacted and will try to fix the error, but it would help if you sent an email to droidippy-mod@oort.se explaining what you did when it happened.</string>
-  <string name="server_unexpected">The server did not respond as expected to what you did. To get it fixed, you need to send an email to droidippy-mod@oort.se explaining what you did when it happened.</string>
+	<string name="purchase_problem">The server seems to have a problem with your purchase of {0}. Contact droidippy-mod@oort.se and your problem will be solved, you will be reimbursed if needed and you will get sincere and profuse apologies.</string>
+	<string name="server_problem">The server seems to have a problem with what you just did. The developer has been contacted and will try to fix the error, but it would help if you visited https://groups.google.com/group/droidippy and, if you are the only experiencing the problem, explained what you did when it happened.</string>
+	<string name="server_unexpected">The server did not respond as expected to what you did. To get it fixed, you need to visit https://groups.google.com/group/droidippy and, if you are the only one experiencing the problem, explained what you did when it happened.</string>
   <string name="new_phase">New phase</string>
   <string name="connecting">Connecting</string>
   <string name="are_you_sure">Are you sure?</string>
@@ -138,7 +138,7 @@
   <string name="buy">Buy</string>
   <string name="if_you_have_any_problems">Click the units in {0} to give orders. Use the big arrow left at the bottom to see your order list. Press \"Commit\" in the list to commit your orders. If you have any problems or questions, use the menu button and select \"Help\"!</string>
   <string name="setting_intent">Setting intent</string>
-  <string name="you_are_banned">You are blacklisted, contact droidippy-mod@oort.se for more information.</string>
+	<string name="you_are_banned">You are blacklisted, contact droidippy-mod@oort.se for more information.</string>
   <string name="banned">You are blacklisted</string>  
   <string name="select_intent">Select intent</string>
   <string name="error_contacting_server">There was a problem contacting the server. Check your internet connection or try again later.</string>
